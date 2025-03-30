@@ -1,0 +1,5 @@
+C:\Users\HERIC\Desktop\Metodologias y Programacion I\Practica01\Ejercicios\obj\Debug\Ejercicios.csprojResolveAssemblyReference.cache
+C:\Users\HERIC\Desktop\Metodologias y Programacion I\Practica01\Ejercicios\bin\Debug\Ejercicios.exe
+C:\Users\HERIC\Desktop\Metodologias y Programacion I\Practica01\Ejercicios\bin\Debug\Ejercicios.pdb
+C:\Users\HERIC\Desktop\Metodologias y Programacion I\Practica01\Ejercicios\obj\Debug\Ejercicios.exe
+C:\Users\HERIC\Desktop\Metodologias y Programacion I\Practica01\Ejercicios\obj\Debug\Ejercicios.pdb
