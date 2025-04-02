@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 namespace Practica02
 {
 	public class Conjunto: Coleccionable
@@ -11,6 +12,10 @@ namespace Practica02
 		public Conjunto()
 		{
 			elementos=new List<Comparable>();
+		}
+		
+		public List<Comparable> getElementos(){
+			return elementos;
 		}
 		
 		public bool pertenece(Comparable c){
@@ -56,6 +61,12 @@ namespace Practica02
 				}
 			}
 			return false;
+		}
+		
+		//ejercicio 05
+		//implemento la interfaz Iterable
+		public Iterador crearIterador(){
+			return new IteradorConjunto(this);
 		}
 		
 	}

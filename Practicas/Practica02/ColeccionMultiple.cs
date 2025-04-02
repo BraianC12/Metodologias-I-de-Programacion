@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 namespace Practica02
 {
 
@@ -13,6 +14,24 @@ namespace Practica02
 		{
 			this.pila= pila;
 			this.cola= cola;
+		}
+		
+		public List<Comparable> getElementos(){
+			List<Comparable> elementos = new List<Comparable>();
+		    
+		    // Recorrer y agregar elementos de la pila
+		    foreach (Comparable item in pila.getElementos())
+		    {
+		        elementos.Add(item);
+		    }
+		
+		    // Recorrer y agregar elementos de la cola
+		    foreach (Comparable item in cola.getElementos())
+		    {
+		        elementos.Add(item);
+		    }
+			//retorna la lista con los elementos combinados (pila y cola)
+		    return elementos;			
 		}
 		
 		public int cuantos(){
@@ -30,7 +49,7 @@ namespace Practica02
 		}
 		
 		public Comparable maximo(){
-			Comparable maxPila=pila.minimo();
+			Comparable maxPila=pila.maximo();
 			Comparable maxCola=cola.maximo();
 			
 			if(maxPila.sosMayor(maxCola)){
@@ -50,6 +69,11 @@ namespace Practica02
 		
 		public bool contiene(Comparable c){
 			return pila.contiene(c) || cola.contiene(c); //verifica si cualquiera de los dos contiene el elemento
+		}
+		
+		//ejercicio05
+		public Iterador crearIterador(){
+			return new IteradorColeccionMultiple(this);
 		}
 		
 	}

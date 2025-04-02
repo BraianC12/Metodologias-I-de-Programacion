@@ -2,7 +2,7 @@
 
 namespace Practica02
 {
-	public interface Coleccionable
+	public interface Coleccionable: Iterable
 	{
 		//ejercicio 03
 		int cuantos();
@@ -10,6 +10,5 @@ namespace Practica02
 		Comparable maximo();
 		void agregar(Comparable c);
 		bool contiene(Comparable c);
-		
 	}
 }

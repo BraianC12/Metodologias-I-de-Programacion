@@ -7,10 +7,10 @@ namespace Practica02
 	public class Alumno: Persona
 	{
 		private int legajo;
-		private int promedio;
+		private double promedio;
 		private EstrategiaDeComparacion estrategia;
 		
-		public Alumno(string n, int d, int l, int p, EstrategiaDeComparacion estrategia): base(n, d)
+		public Alumno(string n, int d, int l, double p, EstrategiaDeComparacion estrategia): base(n, d)
 		{
 			this.legajo=l;
 			this.promedio=p;
@@ -21,9 +21,11 @@ namespace Practica02
 			return legajo;
 		}
 		
-		public int getPromedio(){
+		public double getPromedio(){
 			return promedio;
 		}
+		
+		
 		
 		
 		//Ejercicio 02
@@ -36,6 +38,10 @@ namespace Practica02
 		}
 		public override bool sosIgual(Comparable c){
 			return this.estrategia.sosIgual(this, (Alumno)c);
+		}
+		
+		public void setEstrategia(EstrategiaDeComparacion nvaEstrategia){
+			this.estrategia=nvaEstrategia;
 		}
 	
 		

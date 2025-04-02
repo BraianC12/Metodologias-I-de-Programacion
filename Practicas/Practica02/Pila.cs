@@ -13,6 +13,11 @@ namespace Practica02
 			this.Elementos=new List<Comparable>();
 		}
 		
+		//ejercicio 05
+		public List<Comparable> getElementos(){
+			return Elementos;
+		}
+		
 		//implementacion de la interfaz Colecionable
 		public int cuantos(){
 			return Elementos.Count;
@@ -50,6 +55,12 @@ namespace Practica02
 				}
 			}
 			return false;
+		}
+		
+		//Ejercicio 05
+		//implemento la interfaz iterable
+		public Iterador crearIterador(){
+			return new IteradorPila(this); //primero elemento
 		}
 		
 	}

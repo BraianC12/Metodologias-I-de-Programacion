@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+
+
 namespace Practica02
 {
 	public class Cola: Coleccionable
@@ -12,6 +14,11 @@ namespace Practica02
 		{
 			this.Elementos=new Queue<Comparable>();
 		}
+		
+		public List<Comparable> getElementos(){
+			return new List<Comparable>(Elementos);
+		}
+		
 		
 		//implementacion de interfaces
 		public int cuantos(){
@@ -58,6 +65,12 @@ namespace Practica02
 				}
 			}
 			return false;
+		}
+		
+		//ejercicio05
+		//implemento la interfaz Iterable
+		public Iterador crearIterador(){
+			return new IteradorCola(this);
 		}
 		
 		
