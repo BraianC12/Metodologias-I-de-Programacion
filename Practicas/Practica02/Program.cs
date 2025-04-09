@@ -47,7 +47,6 @@ namespace Practica02
 		}
 		
 		public static void llenarAlumnos(Coleccionable col){	
-			
 			for(int i=0; i<20; i++){
 				//ejercicio 02
 				EstrategiaDeComparacion estrategia=new ComPorLegajo();
@@ -55,25 +54,29 @@ namespace Practica02
 				col.agregar(aux);
 			}
 			
-			//comente esta parte del codigo porque me genera 20 elementos aleatorios para comprobar
-			//si la estrategias implementadas en la Main estaban bien, como no sabia hacerlas 
-			//le pedi a chatGPT que me genere 20 usuarios al azar, solamnte para ver si estaba bien las implementacion realizadas anteriormente
+			//ingresa manualmente, esto es para comprobar que las estrategias implementadas esten bien
 			/*
-			  string[] nombres = { "Juan", "Ana", "Luis", "Sofía", "Carlos", "Martina", "Ezequiel", "Laura", "Pedro", "Mara" };
-    		  Random rnd = new Random();
+			Console.Write("¿Cuantos alumnos debes ingresar?: ");
+			int cantidad=int.Parse(Console.ReadLine());
 			
-			    for (int i = 0; i < 20; i++)
-			    {
-			        string nombre = nombres[rnd.Next(nombres.Length)];
-			        int dni = rnd.Next(40000000, 50000000);  // DNI aleatorio entre 40M y 50M
-			        int legajo = rnd.Next(10000, 20000);    // Legajo entre 10000 y 20000
-			        double promedio = Math.Round(rnd.NextDouble() * 10, 2); // Promedio entre 0 y 10
-			
-			        EstrategiaDeComparacion estrategia = new ComPorLegajo();
-			        Comparable aux = new Alumno(nombre, dni, legajo, promedio, estrategia);
-			        col.agregar(aux);
-			        Console.WriteLine("Nombre: " + nombre + " dni: " + dni + " legajo: " +legajo + " promedio: " + promedio);
-			    }
+			for(int i=0; i<cantidad; i++){
+				Console.Write("\nNombre: ");
+				string nombre=Console.ReadLine();
+				
+				Console.Write("DNI: ");
+				int dni=int.Parse(Console.ReadLine());
+				
+				Console.Write("Legajo: ");
+				int legajo=int.Parse(Console.ReadLine());
+				
+				Console.Write("Promedio: ");
+				double promedio=double.Parse(Console.ReadLine());
+				
+				EstrategiaDeComparacion estrategia=new ComPorLegajo();
+				Comparable alumno=new Alumno(nombre, dni, legajo, promedio, estrategia);
+				col.agregar(alumno);
+				Console.Write("nombre: " + nombre + " DNI: " + dni + " legajo: " + legajo + " promedio: " + promedio);
+			}
 			*/
 			
 		}
