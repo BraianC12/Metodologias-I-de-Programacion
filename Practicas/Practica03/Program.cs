@@ -6,12 +6,29 @@ namespace Practica03
 	{
 		public static void Main(string[] args)
 		{	
+			/*
+			//ejercicio 06
 			Coleccionable col= new Pila();
 			int opcion=3;
-			
 			llenar(col, opcion);
 			imprimirElementos(col);
 			informar(col, opcion);
+			*/
+			
+			//ejercicio 14
+			Profesor profe=new Profesor("Braian", 45619054, 5, new ComPorAntiguedad());
+			Pila pila=new Pila();
+			
+			llenar (pila, 2);
+			Iterador ite=pila.crearIterador();
+			ite.primero();
+			
+			while(!ite.fin()){
+				profe.agregarObservador((Observador)ite.actual());
+				ite.siguiente();
+			}
+			
+			dictadoDeClases(profe);
 			
 			
 			Console.ReadKey(true);
@@ -31,16 +48,12 @@ namespace Practica03
 		}
 		
 		public static void llenar(Coleccionable col, int opcion){	
-			
 			//ejercicio 06
 			for(int i=0; i<20; i++){
 				Comparable c= FabricaDeComparables.crearAleatorio(opcion);
 				col.agregar(c);
-			}
-			
-			
+			}			
 		}
-		
 		
 		public static void imprimirElementos(Coleccionable col){
 			Iterador ite=col.crearIterador();
@@ -66,8 +79,14 @@ namespace Practica03
 				ite.siguiente();
 				}
 			}
-			
-			
+		
+		//ejercicio 13
+		public static void dictadoDeClases(Profesor p){
+			for(int i=0; i<5; i++){
+				p.hablarALaclase();
+				p.escribirAlPizarron();
+			}
+		}
 		}
 		
 	}

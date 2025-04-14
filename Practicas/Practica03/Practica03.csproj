@@ -67,6 +67,8 @@
     <Compile Include="LectorDeDatos.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="Numero.cs" />
+    <Compile Include="Observado.cs" />
+    <Compile Include="Observador.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Pila.cs" />
     <Compile Include="Profesor.cs" />

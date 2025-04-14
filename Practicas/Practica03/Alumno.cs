@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Practica03
 {
 	//Ejercicio 12
-	public class Alumno: Persona
+	public class Alumno: Persona, Observador
 	{
 		private int legajo;
 		private double promedio;
@@ -44,11 +44,29 @@ namespace Practica03
 			this.estrategia=nvaEstrategia;
 		}
 		
-				
+		
 		public override string ToString(){
-			return "Nombre + " + nombre + " Dni: " + dni;
+			return "Nombre: " + nombre + " Dni: " + dni;
 		}
-	
+		
+		//ejercicio 11
+		public void prestarAtencion(){
+			Console.WriteLine("Prestando atencion");
+		}
+		
+		public void distraerse(){
+			Random random= new Random();
+			string[] frases=new string[]{"Mirando el celular", "Dibujando en el margen de la carpeta", "Tirando aviones de papel"};
+			Console.WriteLine(frases[random.Next(0,2)]);
+		}
+		
+		//implemento la interfaz Observador
+		public void actualizar(Observado o){
+			if(((Profesor)o).isHablando()){
+				this.prestarAtencion();
+			}
+			else{this.distraerse();}
+		}
 		
 	}
 }
