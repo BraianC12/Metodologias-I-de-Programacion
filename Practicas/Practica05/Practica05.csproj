@@ -65,8 +65,10 @@
     <Compile Include="DecoradoPorLegajo.cs" />
     <Compile Include="DecoradoPorLetras.cs" />
     <Compile Include="EstrategiaDeComparacion.cs" />
+    <Compile Include="FabricaDeAlumnoEstudioso.cs" />
     <Compile Include="FabricaDeAlumnos.cs" />
     <Compile Include="FabricaDeComparables.cs" />
+    <Compile Include="FabricaDeDecorados.cs" />
     <Compile Include="FabricaDeNumeros.cs" />
     <Compile Include="FabricaDeProfesores.cs" />
     <Compile Include="GeneradorDeDatosAleatorios.cs" />

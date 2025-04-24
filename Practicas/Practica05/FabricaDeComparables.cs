@@ -18,6 +18,8 @@ namespace Practica05
 					case 1: fabrica= new FabricaDeNumeros();break;
 					case 2: fabrica= new FabricaDeAlumnos();break;
 					case 3: fabrica= new FabricaDeProfesores();break;
+					case 4: fabrica= new FabricaDeAlumnoEstudioso();break;
+					case 5: fabrica= new FabricaDeDecorados();break;
 					default: throw new ArgumentException("Opción inválida: " + opcion);
 			}
 			return fabrica.crearAleatorio();
@@ -31,6 +33,8 @@ namespace Practica05
 					case 1: fabrica=new FabricaDeNumeros(); break;
 					case 2: fabrica=new FabricaDeAlumnos(); break;
 					case 3: fabrica= new FabricaDeProfesores();break;
+					case 4: fabrica= new FabricaDeAlumnoEstudioso();break;
+					case 5: fabrica= new FabricaDeDecorados();break;
 					default: throw new ArgumentException("Opción inválida: " + opcion);
 			}
 			return fabrica.crearPorTeclado();

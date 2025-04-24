@@ -37,7 +37,7 @@ namespace Practica05
 			pila.setOrdenAulaLlena(new OrdenAulaLlena(aula));
 			
 			llenar(pila, 2); //alumnos normales
-			llenar(pila, 2); //alumnos estudiosos 
+			llenar(pila, 4); //alumnos estudiosos 
 			
 			
 			Console.ReadKey();
