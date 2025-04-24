@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
-    <ProjectGuid>{2B6783C3-FA3A-4E51-981D-7B7079442D4F}</ProjectGuid>
+    <ProjectGuid>{D150EA0D-AACD-4306-918A-A2B57C7439E8}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Practica04</RootNamespace>
-    <AssemblyName>Practica04</AssemblyName>
+    <RootNamespace>Practica05</RootNamespace>
+    <AssemblyName>Practica05</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
   </PropertyGroup>
@@ -49,6 +49,8 @@
     <Compile Include="AlumnoAdapter.cs" />
     <Compile Include="AlumnoDecorator.cs" />
     <Compile Include="AlumnoMuyEstudioso.cs" />
+    <Compile Include="AlumnoProxy.cs" />
+    <Compile Include="Aula.cs" />
     <Compile Include="Cola.cs" />
     <Compile Include="Coleccionable.cs" />
     <Compile Include="ColeccionMultiple.cs" />
@@ -63,10 +65,8 @@
     <Compile Include="DecoradoPorLegajo.cs" />
     <Compile Include="DecoradoPorLetras.cs" />
     <Compile Include="EstrategiaDeComparacion.cs" />
-    <Compile Include="FabricaDeAlumnoEstudioso.cs" />
     <Compile Include="FabricaDeAlumnos.cs" />
     <Compile Include="FabricaDeComparables.cs" />
-    <Compile Include="FabricaDeDecorados.cs" />
     <Compile Include="FabricaDeNumeros.cs" />
     <Compile Include="FabricaDeProfesores.cs" />
     <Compile Include="GeneradorDeDatosAleatorios.cs" />
@@ -82,6 +82,12 @@
     <Compile Include="Numero.cs" />
     <Compile Include="Observado.cs" />
     <Compile Include="Observador.cs" />
+    <Compile Include="Ordenable.cs" />
+    <Compile Include="OrdenAulaLlena.cs" />
+    <Compile Include="OrdenEnAula1.cs" />
+    <Compile Include="OrdenEnAula2.cs" />
+    <Compile Include="OrdenInicio.cs" />
+    <Compile Include="OrdenLlegaAlumno.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Pila.cs" />
     <Compile Include="Profesor.cs" />

@@ -2,58 +2,43 @@
 using System.Collections.Generic;
 using MetodologíasDeProgramaciónI;
 
-namespace Practica04
+namespace Practica05
 {
 	class Program
 	{
 		public static void Main(string[] args)
-		{
-			Teacher teacher=new Teacher();
-			//ejercicio 04 - Practica 04
-			
-		/*	for(int i=0; i<20; i++){
-				IAlumno alumno;
-				if (i<10){
-					alumno=(IAlumno)FabricaDeComparables.crearAleatorio(2); //alumnos normales
-				}
-				
-				else{
-					alumno=(IAlumno)FabricaDeComparables.crearAleatorio(4); //alumno estudioso
-				}
-				
-				Student alumnoAdaptado=new AlumnoAdapter(alumno);
-				teacher.goToClass(alumnoAdaptado);
-			}
-			
-			teacher.teachingAClass();
-		*/	
-			
-			//ejercicio 06 - practica 04
-			
+		{			
 			/*
+			Teacher teacher=new Teacher();
+			Student student;
+			IAlumno alumno;
+			//ejercicio 02 - practica 05
 			for(int i=0; i<20; i++){
-				IAlumno decorado=(IAlumno) FabricaDeComparables.crearAleatorio(2);
-				//IAlumno decorado=new DecoradoPorLegajo(alumno); //por legajo
-				//decorado=new DecoradoPorLetras(decorado); //por letras
-				//decorado=new DecoradoPorEstado(decorado); //por estado
-				decorado=new DecoradoPorAstericos(decorado); //astericos
-				Student alumnoAdaptado=new AlumnoAdapter(decorado);
-				teacher.goToClass(alumnoAdaptado);
+				if(i<10){
+					alumno=new AlumnoProxy("PEPITO", 2);
+					student=new AlumnoAdapter(alumno);
+				}
+				else{
+					alumno=new AlumnoProxy("BRAIAN", 2);
+					student=new AlumnoAdapter(alumno);
+				}
+				teacher.goToClass(student);
 			}
 			teacher.teachingAClass();
+			//HACER LA FABRICA DE ALUMNOS MUY ESTUDIOSOS Y DECORACION
 			*/
 			
+			//ejercicio 10 - practica 05
+			Pila pila=new Pila();
+			Aula aula=new Aula();
 			
+			pila.setOrdenInicio(new OrdenInicio(aula));
+			pila.setOrdenLlegaAlumno(new OrdenLlegaAlumno(aula));
+			pila.setOrdenAulaLlena(new OrdenAulaLlena(aula));
 			
-		
-			//ejercicio 07 - practica 04
-			for(int i=0; i<20; i++){
-				IAlumno decorado=(IAlumno)FabricaDeComparables.crearAleatorio(5);
-				Student alumnoAdaptado=new AlumnoAdapter(decorado);
-				teacher.goToClass(alumnoAdaptado);
-			}
+			llenar(pila, 2); //alumnos normales
+			llenar(pila, 2); //alumnos estudiosos 
 			
-			teacher.teachingAClass();
 			
 			Console.ReadKey();
 			
@@ -74,7 +59,7 @@ namespace Practica04
 		}
 		
 		public static void llenar(Coleccionable col, int opcion){	
-			for(int i=0; i<20; i++){
+			for(int i=0; i<=20; i++){
 				Comparable c= FabricaDeComparables.crearAleatorio(opcion);
 				col.agregar(c);
 			}			
@@ -97,7 +82,7 @@ namespace Practica04
 			ite.primero();
 			
 			while(!ite.fin()){
-				Alumno alumno=(Alumno)ite.actual(); //casteo para que el elemento comparable sea Alumno
+				IAlumno alumno=(IAlumno)ite.actual(); //casteo para que el elemento comparable sea Alumno
 				alumno.setEstrategia(e); //cambia la estrategia de comparacion
         		Console.WriteLine("Cambiando estrategia de: " + alumno);
 				
