@@ -3,9 +3,11 @@ using System.Collections.Generic;
 
 namespace Practica05
 {
-	public class Conjunto: Coleccionable
+	public class Conjunto: Coleccionable, Ordenable
 	{
 		private List<Comparable> elementos;
+		private OrdenEnAula1 ordenInicio, ordenAulaLlena;
+		private OrdenEnAula2 ordenLlegaAlumno;
 		
 		
 		public Conjunto()
@@ -24,6 +26,17 @@ namespace Practica05
 		public void agregar(Comparable c){
 			if(pertenece(c) == false){ //si retorna falso, agrega el elemento
 				elementos.Add(c);
+				if(elementos.Count == 1 && ordenInicio !=null){
+					ordenInicio.ejecutar();
+				}
+					
+				if(ordenLlegaAlumno != null){
+					ordenLlegaAlumno.ejecutar(c);
+				}
+					
+				if(elementos.Count == 40 && ordenAulaLlena != null){
+					ordenAulaLlena.ejecutar();
+				}
 			}
 		}
 		
@@ -31,7 +44,6 @@ namespace Practica05
 			return elementos.Count;
 		}
 		
-		//la implementacion de la interfaz "agregar" ya fue realizada en la actividad anterior
 		public Comparable minimo(){
 			Comparable minimoActual=elementos[0];
 			for(int i=1;i<cuantos(); i++){
@@ -64,6 +76,22 @@ namespace Practica05
 		public Iterador crearIterador(){
 			return new IteradorConjunto(this);
 		}
+		
+		
+		//ejercicio 09 - practica 05
+		//implemenatr la interfaz Ordenable
+		public void setOrdenInicio(OrdenEnAula1 o){
+			ordenInicio= o;
+		}
+		
+		public void setOrdenLlegaAlumno(OrdenEnAula2 o){
+			ordenLlegaAlumno= o;
+		}
+		
+		public void setOrdenAulaLlena(OrdenEnAula1 o){
+			ordenAulaLlena= o;
+		}
+		
 		
 	}
 }

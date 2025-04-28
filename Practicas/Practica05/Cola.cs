@@ -4,11 +4,13 @@ using System.Collections.Generic;
 
 namespace Practica05
 {
-	public class Cola: Coleccionable
+	public class Cola: Coleccionable, Ordenable
 	{
 		//ejercicio 04
 		
 		Queue<Comparable> Elementos;
+		private OrdenEnAula1 ordenInicio, ordenAulaLlena;
+		private OrdenEnAula2 ordenLlegaAlumno;
 		
 		public Cola()
 		{
@@ -54,9 +56,6 @@ namespace Practica05
 			return maximo;
 		}
 		
-		public void agregar(Comparable c){
-			Elementos.Enqueue(c); //agrega el elemento al final de la cola
-		}
 		
 		public bool contiene(Comparable c){
 			foreach(Comparable e in Elementos){
@@ -66,11 +65,42 @@ namespace Practica05
 			}
 			return false;
 		}
+			//ejercicio 09 - practica 05
+		public void agregar(Comparable c){
+				Elementos.Enqueue(c);
+			
+			if(Elementos.Count == 1 && ordenInicio !=null){
+				ordenInicio.ejecutar();
+			}
+			
+			if(ordenLlegaAlumno != null){
+				ordenLlegaAlumno.ejecutar(c);
+			}
+			
+			if(Elementos.Count == 40 && ordenAulaLlena != null){
+				ordenAulaLlena.ejecutar();
+			
+			}
+		}
 		
 		//ejercicio05
 		//implemento la interfaz Iterable
 		public Iterador crearIterador(){
 			return new IteradorCola(this);
+		}
+		
+		//ejercicio 09 - practica 05
+		//implemenatr la interfaz Ordenable
+		public void setOrdenInicio(OrdenEnAula1 o){
+			ordenInicio= o;
+		}
+		
+		public void setOrdenLlegaAlumno(OrdenEnAula2 o){
+			ordenLlegaAlumno= o;
+		}
+		
+		public void setOrdenAulaLlena(OrdenEnAula1 o){
+			ordenAulaLlena= o;
 		}
 		
 		

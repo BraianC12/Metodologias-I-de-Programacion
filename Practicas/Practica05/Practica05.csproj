@@ -67,6 +67,7 @@
     <Compile Include="EstrategiaDeComparacion.cs" />
     <Compile Include="FabricaDeAlumnoEstudioso.cs" />
     <Compile Include="FabricaDeAlumnos.cs" />
+    <Compile Include="FabricaDeAlumnosProxy.cs" />
     <Compile Include="FabricaDeComparables.cs" />
     <Compile Include="FabricaDeDecorados.cs" />
     <Compile Include="FabricaDeNumeros.cs" />

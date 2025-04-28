@@ -25,11 +25,12 @@ namespace Practica05
 				teacher.goToClass(student);
 			}
 			teacher.teachingAClass();
-			//HACER LA FABRICA DE ALUMNOS MUY ESTUDIOSOS Y DECORACION
 			*/
 			
 			//ejercicio 10 - practica 05
 			Pila pila=new Pila();
+			//Cola cola=new Cola();
+			//Conjunto conjunto=new Conjunto();
 			Aula aula=new Aula();
 			
 			pila.setOrdenInicio(new OrdenInicio(aula));
@@ -38,7 +39,6 @@ namespace Practica05
 			
 			llenar(pila, 2); //alumnos normales
 			llenar(pila, 4); //alumnos estudiosos 
-			
 			
 			Console.ReadKey();
 			
