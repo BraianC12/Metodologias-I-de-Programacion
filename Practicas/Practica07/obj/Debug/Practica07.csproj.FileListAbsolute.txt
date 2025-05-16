@@ -1,0 +1,6 @@
+C:\Users\HERIC\Desktop\Metodologias-I-de-Programacion\Practicas\Practica07\obj\Debug\Practica07.csprojResolveAssemblyReference.cache
+C:\Users\HERIC\Desktop\Metodologias-I-de-Programacion\Practicas\Practica07\bin\Debug\Practica07.exe.config
+C:\Users\HERIC\Desktop\Metodologias-I-de-Programacion\Practicas\Practica07\bin\Debug\Practica07.exe
+C:\Users\HERIC\Desktop\Metodologias-I-de-Programacion\Practicas\Practica07\bin\Debug\Practica07.pdb
+C:\Users\HERIC\Desktop\Metodologias-I-de-Programacion\Practicas\Practica07\obj\Debug\Practica07.exe
+C:\Users\HERIC\Desktop\Metodologias-I-de-Programacion\Practicas\Practica07\obj\Debug\Practica07.pdb

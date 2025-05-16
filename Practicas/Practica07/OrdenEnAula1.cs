@@ -1,0 +1,13 @@
+﻿using System;
+
+namespace Practica07
+{
+	/// <summary>
+	/// Description of OrdenEnAula1.
+	/// </summary>
+	public interface OrdenEnAula1
+	{
+		//ejercicio 04 - practica 05
+		void ejecutar();
+	}
+}
